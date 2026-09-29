@@ -4,7 +4,8 @@
 // import viteLogo from './assets/vite.svg'
 // import './App.css'
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
+import { Button } from './components/ui/button';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -12,12 +13,16 @@ function App() {
 
       useEffect(() => {
     fetch('/api/hello')
-      .then(res => res.json())
-      .then(data => setMessage(data.message));
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
   }, []);
 
-  return <p>{message}</p>
-
+  return (
+    <div className='p-4'>
+      <p className="font-bold text-3xl">{message}</p>
+      <Button>Click me</Button>
+    </div>
+  );
 }
 
-export default App
+export default App;

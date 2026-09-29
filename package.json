@@ -3,12 +3,13 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-   "scripts": {
+  "scripts": {
     "dev": "bun run index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "concurrently": "^10.0.5"
+    "concurrently": "^10.0.5",
+    "prettier": "^3.9.9"
   },
   "peerDependencies": {
     "typescript": "^7"
